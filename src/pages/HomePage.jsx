@@ -10,7 +10,7 @@ const FeatureCard = ({ icon: Icon, title, description, to, colorClass }) => {
             onClick={() => navigate(to)}
             className="group relative overflow-hidden bg-surface rounded-[24px] p-6 border border-outline/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg cursor-pointer"
         >
-            <div className={`w - 12 h - 12 rounded - 2xl ${colorClass} flex items - center justify - center mb - 4 group - hover: scale - 110 transition - transform duration - 300`}>
+            <div className={`w-12 h-12 rounded-2xl ${colorClass} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                 <Icon className="w-6 h-6" />
             </div>
             <h3 className="text-xl font-bold text-on-surface mb-2">{title}</h3>
