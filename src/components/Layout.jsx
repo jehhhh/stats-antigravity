@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import { Menu, X, BookOpen, Activity, Calculator, CheckCircle, TrendingUp, BarChart2, FileQuestion, Home } from 'lucide-react';
+import { Menu, X, BookOpen, Activity, Calculator, CheckCircle, TrendingUp, BarChart2, FileQuestion, Home, Share2, Split } from 'lucide-react';
 import { clsx } from 'clsx';
 
 const NavItem = ({ to, label, icon: Icon, onClick }) => (
@@ -78,6 +78,8 @@ export default function Layout({ children }) {
                         <div className="px-4 text-xs font-bold text-primary uppercase tracking-wider mb-2">Simulations</div>
                         <NavItem to="/law-of-large-numbers" label="Law of Large Numbers" icon={TrendingUp} />
                         <NavItem to="/normal-approximation" label="Normal Approximation" icon={BarChart2} />
+                        <NavItem to="/viral-trends" label="Viral Trends (Social)" icon={Share2} />
+                        <NavItem to="/ab-testing" label="A/B Testing (Business)" icon={Split} />
                     </div>
 
                     <div>

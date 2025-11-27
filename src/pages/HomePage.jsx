@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { BookOpen, Activity, Calculator, CheckCircle, TrendingUp, ArrowRight, BarChart2, FileQuestion } from 'lucide-react';
+import { ArrowRight, BookOpen, Activity, Calculator, TrendingUp, BarChart2, CheckCircle, FileQuestion, Share2, Split } from 'lucide-react';
 
 const FeatureCard = ({ icon: Icon, title, description, to, colorClass }) => {
     const navigate = useNavigate();
@@ -9,7 +10,7 @@ const FeatureCard = ({ icon: Icon, title, description, to, colorClass }) => {
             onClick={() => navigate(to)}
             className="group relative overflow-hidden bg-surface rounded-[24px] p-6 border border-outline/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg cursor-pointer"
         >
-            <div className={`w-12 h-12 rounded-2xl ${colorClass} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+            <div className={`w - 12 h - 12 rounded - 2xl ${colorClass} flex items - center justify - center mb - 4 group - hover: scale - 110 transition - transform duration - 300`}>
                 <Icon className="w-6 h-6" />
             </div>
             <h3 className="text-xl font-bold text-on-surface mb-2">{title}</h3>
@@ -99,6 +100,20 @@ export default function HomePage() {
                         icon={TrendingUp}
                         title="Law of Large Numbers"
                         description="Run simulations to see probability convergence in action."
+                        colorClass="bg-primary-container text-on-primary-container"
+                    />
+                    <FeatureCard
+                        to="/viral-trends"
+                        icon={Share2}
+                        title="Viral Trends"
+                        description="Simulate social media virality. Will your post spread or flop?"
+                        colorClass="bg-primary-container text-on-primary-container"
+                    />
+                    <FeatureCard
+                        to="/ab-testing"
+                        icon={Split}
+                        title="A/B Testing"
+                        description="Run business experiments to optimize conversion rates."
                         colorClass="bg-primary-container text-on-primary-container"
                     />
                     <FeatureCard

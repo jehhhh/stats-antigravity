@@ -10,6 +10,8 @@ import QuizPage from './pages/QuizPage';
 import LawOfLargeNumbersPage from './pages/LawOfLargeNumbersPage';
 import NormalApproximationPage from './pages/NormalApproximationPage';
 import ExamQuestionsPage from './pages/ExamQuestionsPage';
+import ViralTrendsPage from './pages/ViralTrendsPage';
+import ABTestingPage from './pages/ABTestingPage';
 import 'katex/dist/katex.min.css';
 
 function App() {
@@ -30,6 +32,8 @@ function App() {
           <Route path="/law-of-large-numbers" element={<LawOfLargeNumbersPage />} />
           <Route path="/normal-approximation" element={<NormalApproximationPage />} />
           <Route path="/exam-questions" element={<ExamQuestionsPage />} />
+          <Route path="/viral-trends" element={<ViralTrendsPage />} />
+          <Route path="/ab-testing" element={<ABTestingPage />} />
         </Routes>
       </Layout>
     </BrowserRouter>
