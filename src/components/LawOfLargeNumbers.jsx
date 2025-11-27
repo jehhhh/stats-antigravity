@@ -107,8 +107,8 @@ export default function LawOfLargeNumbers() {
                             <button
                                 onClick={runSimulation}
                                 className={`flex-1 py-3 px-4 rounded-xl font-semibold flex items-center justify-center transition-colors ${isRunning
-                                        ? 'bg-amber-100 text-amber-700 hover:bg-amber-200'
-                                        : 'bg-indigo-600 text-white hover:bg-indigo-700'
+                                    ? 'bg-amber-100 text-amber-700 hover:bg-amber-200'
+                                    : 'bg-indigo-600 text-white hover:bg-indigo-700'
                                     }`}
                             >
                                 {isRunning ? 'Pause' : 'Start'}
@@ -146,7 +146,7 @@ export default function LawOfLargeNumbers() {
 
                 <div className="lg:col-span-2 min-h-[400px] bg-white rounded-xl border border-slate-200 p-4">
                     <ResponsiveContainer width="100%" height={400}>
-                        <LineChart data={data} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
+                        <LineChart data={data} margin={{ top: 20, right: 50, left: 50, bottom: 20 }}>
                             <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
                             <XAxis
                                 dataKey="trial"

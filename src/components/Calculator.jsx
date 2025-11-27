@@ -37,7 +37,7 @@ export default function Calculator() {
     const result = calculate();
 
     return (
-        <div className="p-6 lg:p-8">
+        <div className="p-4 lg:p-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <div className="space-y-8">
                     <div>
@@ -92,7 +92,7 @@ export default function Calculator() {
                     </button>
                 </div>
 
-                <div className="relative">
+                <div className="relative min-h-[300px]">
                     {!showSolution ? (
                         <div className="absolute inset-0 flex items-center justify-center bg-slate-50 rounded-2xl border-2 border-dashed border-slate-200 text-slate-400">
                             <div className="text-center">
@@ -113,7 +113,7 @@ export default function Calculator() {
                                 <div className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
                                     <div className="bg-slate-50 px-6 py-4 border-b border-slate-200">
                                         <p className="font-medium text-slate-700">Formula</p>
-                                        <div className="mt-2 text-slate-900">
+                                        <div className="mt-2 text-slate-900 overflow-x-auto max-w-full">
                                             <BlockMath math="P(X=r) = \binom{n}{r} p^r (1-p)^{n-r}" />
                                         </div>
                                     </div>
@@ -121,9 +121,9 @@ export default function Calculator() {
                                     <div className="p-6 space-y-6">
                                         <div className="flex items-start">
                                             <div className="w-8 h-8 rounded-full bg-indigo-50 text-indigo-600 flex-shrink-0 flex items-center justify-center text-sm font-bold mr-4">1</div>
-                                            <div>
+                                            <div className="flex-1 min-w-0">
                                                 <p className="font-medium text-slate-900">Identify Parameters</p>
-                                                <div className="mt-2 grid grid-cols-3 gap-4 text-sm">
+                                                <div className="mt-2 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
                                                     <div className="bg-slate-50 p-2 rounded border border-slate-100">
                                                         <span className="text-slate-500 block text-xs">n (trials)</span>
                                                         <span className="font-mono font-semibold">{n}</span>
@@ -142,7 +142,7 @@ export default function Calculator() {
 
                                         <div className="flex items-start">
                                             <div className="w-8 h-8 rounded-full bg-indigo-50 text-indigo-600 flex-shrink-0 flex items-center justify-center text-sm font-bold mr-4">2</div>
-                                            <div>
+                                            <div className="flex-1 min-w-0">
                                                 <p className="font-medium text-slate-900">Calculate Combinations</p>
                                                 <p className="text-sm text-slate-600 mt-1">Number of ways to choose {r} successes from {n} trials.</p>
                                                 <div className="mt-2 text-slate-900">
@@ -153,14 +153,14 @@ export default function Calculator() {
 
                                         <div className="flex items-start">
                                             <div className="w-8 h-8 rounded-full bg-indigo-50 text-indigo-600 flex-shrink-0 flex items-center justify-center text-sm font-bold mr-4">3</div>
-                                            <div>
+                                            <div className="flex-1 min-w-0">
                                                 <p className="font-medium text-slate-900">Compute Probability</p>
-                                                <div className="mt-2 text-slate-900 overflow-x-auto">
+                                                <div className="mt-2 text-slate-900 overflow-x-auto max-w-full">
                                                     <BlockMath math={`P(X=${r}) = ${result.combinations} \\times (${p})^{${r}} \\times (${result.q.toFixed(2)})^{${n - r}}`} />
-                                                    <div className="flex items-center justify-center mt-4 text-2xl font-bold text-indigo-600">
-                                                        <ArrowRight className="w-6 h-6 mr-3 text-slate-300" />
-                                                        {result.prob.toFixed(4)}
-                                                        <span className="text-sm font-normal text-slate-500 ml-3">({(result.prob * 100).toFixed(2)}%)</span>
+                                                    <div className="flex flex-col sm:flex-row items-center justify-center mt-4 text-2xl font-bold text-indigo-600">
+                                                        <ArrowRight className="w-6 h-6 mb-2 sm:mb-0 sm:mr-3 text-slate-300 transform rotate-90 sm:rotate-0" />
+                                                        <span>{result.prob.toFixed(4)}</span>
+                                                        <span className="text-sm font-normal text-slate-500 mt-1 sm:mt-0 sm:ml-3">({(result.prob * 100).toFixed(2)}%)</span>
                                                     </div>
                                                 </div>
                                             </div>

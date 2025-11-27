@@ -16,7 +16,7 @@ export default function BernoulliPage() {
             {/* Historical Context */}
             <section className="material-card p-8">
                 <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center mr-4">
+                    <div className="w-12 h-12 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center mr-4">
                         <History className="w-6 h-6" />
                     </div>
                     <h2 className="text-2xl font-bold text-on-surface">Historical Context</h2>
@@ -50,7 +50,7 @@ export default function BernoulliPage() {
 
                     <div className="my-8 p-6 bg-surface-variant rounded-2xl text-on-surface-variant">
                         <p className="text-center text-sm uppercase tracking-wider font-bold mb-4 opacity-70">Probability Mass Function (PMF)</p>
-                        <div className="text-center text-xl font-mono">
+                        <div className="text-center text-xl font-mono overflow-x-auto">
                             <BlockMath math="P(X=x) = \begin{cases} p & \text{if } x=1 \\ 1-p & \text{if } x=0 \\ 0 & \text{otherwise} \end{cases}" />
                         </div>
                         <p className="text-center text-sm mt-4 opacity-70">
@@ -63,7 +63,7 @@ export default function BernoulliPage() {
             {/* Mean and Variance */}
             <section className="material-card p-8">
                 <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center mr-4">
+                    <div className="w-12 h-12 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center mr-4">
                         <Calculator className="w-6 h-6" />
                     </div>
                     <h2 className="text-2xl font-bold text-on-surface">Mean & Variance</h2>
@@ -76,7 +76,7 @@ export default function BernoulliPage() {
                             The expected value <InlineMath math="E[X]" /> represents the theoretical average outcome if we were to repeat the experiment infinitely many times.
                         </p>
                         <div className="bg-surface-variant/50 p-6 rounded-2xl border border-outline/10">
-                            <div className="font-mono text-sm text-on-surface space-y-2">
+                            <div className="font-mono text-sm text-on-surface space-y-2 overflow-x-auto">
                                 <p className="text-xs text-on-surface-variant font-sans mb-2 uppercase tracking-wider font-bold">Derivation</p>
                                 <BlockMath math="E[X] = \sum_{x} x \cdot P(X=x)" />
                                 <BlockMath math="= 0 \cdot (1-p) + 1 \cdot p" />
@@ -93,7 +93,7 @@ export default function BernoulliPage() {
                             Variance measures the spread or dispersion of the random variable. It quantifies how much the outcomes fluctuate around the mean.
                         </p>
                         <div className="bg-surface-variant/50 p-6 rounded-2xl border border-outline/10">
-                            <div className="font-mono text-sm text-on-surface space-y-2">
+                            <div className="font-mono text-sm text-on-surface space-y-2 overflow-x-auto">
                                 <p className="text-xs text-on-surface-variant font-sans mb-2 uppercase tracking-wider font-bold">Derivation</p>
                                 <BlockMath math="Var(X) = E[X^2] - (E[X])^2" />
                                 <BlockMath math="= p - p^2 = p(1 - p)" />
@@ -109,7 +109,7 @@ export default function BernoulliPage() {
             {/* Hypothesis Testing */}
             <section className="material-card p-8">
                 <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-error-container text-on-error-container flex items-center justify-center mr-4">
+                    <div className="w-12 h-12 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center mr-4">
                         <FlaskConical className="w-6 h-6" />
                     </div>
                     <h2 className="text-2xl font-bold text-on-surface">Hypothesis Testing</h2>
@@ -141,7 +141,7 @@ export default function BernoulliPage() {
                         <p className="text-sm mb-4 opacity-80">
                             For large samples, we use the Normal approximation. The test statistic <InlineMath math="Z" /> measures how many standard deviations our observed <InlineMath math="\hat{p}" /> is from the null hypothesis.
                         </p>
-                        <div className="text-center font-mono text-lg">
+                        <div className="text-center font-mono text-lg overflow-x-auto">
                             <BlockMath math="Z = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}}" />
                         </div>
                     </div>

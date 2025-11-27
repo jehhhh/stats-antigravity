@@ -16,7 +16,7 @@ export default function BinomialPage() {
             {/* Historical Context */}
             <section className="material-card p-8">
                 <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center mr-4">
+                    <div className="w-12 h-12 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center mr-4">
                         <History className="w-6 h-6" />
                     </div>
                     <h2 className="text-2xl font-bold text-on-surface">Historical Context</h2>
@@ -46,7 +46,7 @@ export default function BinomialPage() {
 
                     <div className="my-8 p-6 bg-surface-variant rounded-2xl text-on-surface-variant">
                         <p className="text-center text-sm uppercase tracking-wider font-bold mb-4 opacity-70">Probability Mass Function</p>
-                        <div className="text-center text-2xl font-mono">
+                        <div className="text-center text-2xl font-mono overflow-x-auto">
                             <BlockMath math="P(X=r) = \binom{n}{r} p^r (1-p)^{n-r}" />
                         </div>
                         <div className="mt-6 flex justify-center gap-8 text-sm opacity-70">
@@ -81,7 +81,7 @@ export default function BinomialPage() {
             {/* Expected Value and Variance */}
             <section className="material-card p-8">
                 <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center mr-4">
+                    <div className="w-12 h-12 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center mr-4">
                         <Calculator className="w-6 h-6" />
                     </div>
                     <h2 className="text-2xl font-bold text-on-surface">Expected Value & Variance</h2>
@@ -91,14 +91,14 @@ export default function BinomialPage() {
                     <p>
                         Since a Binomial variable <InlineMath math="X" /> is the sum of <InlineMath math="n" /> independent Bernoulli variables <InlineMath math="X_1, X_2, ..., X_n" />:
                     </p>
-                    <div className="my-4 bg-surface-variant/50 p-4 rounded-xl border border-outline/10 font-mono text-sm">
+                    <div className="my-4 bg-surface-variant/50 p-4 rounded-xl border border-outline/10 font-mono text-sm overflow-x-auto">
                         <BlockMath math="X = X_1 + X_2 + ... + X_n" />
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-8 mt-8">
                         <div>
                             <h4 className="font-bold text-on-surface mb-2">Expected Value (Mean)</h4>
-                            <div className="font-mono text-sm text-on-surface">
+                            <div className="font-mono text-sm text-on-surface overflow-x-auto">
                                 <BlockMath math="E[X] = \sum E[X_i] = np" />
                                 <div className="mt-4 p-3 bg-secondary-container/30 border border-secondary-container rounded-xl text-center font-bold text-on-secondary-container text-lg">
                                     <InlineMath math="E[X] = np" />
@@ -107,7 +107,7 @@ export default function BinomialPage() {
                         </div>
                         <div>
                             <h4 className="font-bold text-on-surface mb-2">Variance</h4>
-                            <div className="font-mono text-sm text-on-surface">
+                            <div className="font-mono text-sm text-on-surface overflow-x-auto">
                                 <BlockMath math="Var(X) = \sum Var(X_i) = npq" />
                                 <div className="mt-4 p-3 bg-secondary-container/30 border border-secondary-container rounded-xl text-center font-bold text-on-secondary-container text-lg">
                                     <InlineMath math="Var(X) = npq" />
@@ -121,7 +121,7 @@ export default function BinomialPage() {
             {/* Worked Example: Martin's Clothing Store */}
             <section className="material-card p-8">
                 <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center mr-4">
+                    <div className="w-12 h-12 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center mr-4">
                         <ShoppingBag className="w-6 h-6" />
                     </div>
                     <h2 className="text-2xl font-bold text-on-surface">Worked Example</h2>
@@ -158,7 +158,7 @@ export default function BinomialPage() {
 
                         <div>
                             <h4 className="font-bold text-on-surface mb-2">3. Calculate Expected Value</h4>
-                            <div className="bg-surface-variant p-4 rounded-xl font-mono text-sm">
+                            <div className="bg-surface-variant p-4 rounded-xl font-mono text-sm overflow-x-auto">
                                 <BlockMath math="E[X] = np = 10 \times 0.3 = 3" />
                             </div>
                             <p className="mt-2 text-sm">

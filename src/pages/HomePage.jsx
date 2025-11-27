@@ -78,28 +78,28 @@ export default function HomePage() {
                         icon={BookOpen}
                         title="Binomial Distribution"
                         description="Scale up to multiple trials. Learn about the BINS conditions and the formula."
-                        colorClass="bg-secondary-container text-on-secondary-container"
+                        colorClass="bg-primary-container text-on-primary-container"
                     />
                     <FeatureCard
                         to="/visualizer"
                         icon={Activity}
                         title="Interactive Visualizer"
                         description="Play with parameters n and p to see how the distribution shape changes in real-time."
-                        colorClass="bg-tertiary-container text-on-tertiary-container"
+                        colorClass="bg-primary-container text-on-primary-container"
                     />
                     <FeatureCard
                         to="/calculator"
                         icon={Calculator}
                         title="Probability Calculator"
                         description="Solve complex problems with step-by-step breakdowns and LaTeX formulas."
-                        colorClass="bg-error-container text-on-error-container"
+                        colorClass="bg-primary-container text-on-primary-container"
                     />
                     <FeatureCard
                         to="/law-of-large-numbers"
                         icon={TrendingUp}
                         title="Law of Large Numbers"
                         description="Run simulations to see probability convergence in action."
-                        colorClass="bg-surface-variant text-on-surface-variant"
+                        colorClass="bg-primary-container text-on-primary-container"
                     />
                     <FeatureCard
                         to="/normal-approximation"
@@ -113,14 +113,14 @@ export default function HomePage() {
                         icon={CheckCircle}
                         title="Knowledge Check"
                         description="Test your understanding with 20 interactive questions and instant feedback."
-                        colorClass="bg-secondary-container text-on-secondary-container"
+                        colorClass="bg-primary-container text-on-primary-container"
                     />
                     <FeatureCard
                         to="/exam-questions"
                         icon={FileQuestion}
                         title="Exam Questions"
                         description="Practice with 5 comprehensive exam-style questions covering all topics."
-                        colorClass="bg-tertiary-container text-on-tertiary-container"
+                        colorClass="bg-primary-container text-on-primary-container"
                     />
                 </div>
             </section>

@@ -46,7 +46,7 @@ export default function Layout({ children }) {
 
             {/* Sidebar Navigation (Drawer) */}
             <nav className={clsx(
-                "fixed lg:sticky top-0 left-0 h-screen w-[280px] bg-surface-variant/30 lg:bg-surface border-r border-outline/10 z-40 transform transition-transform duration-300 ease-in-out lg:translate-x-0 overflow-y-auto",
+                "fixed lg:sticky top-0 left-0 h-screen w-[280px] bg-surface border-r border-outline/10 z-40 transform transition-transform duration-300 ease-in-out lg:translate-x-0 overflow-y-auto pt-16 lg:pt-0",
                 isMobileMenuOpen ? "translate-x-0 shadow-xl" : "-translate-x-full"
             )}>
                 <div className="p-6">

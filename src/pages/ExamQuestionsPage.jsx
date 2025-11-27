@@ -6,12 +6,12 @@ const Question = ({ number, title, children, answer }) => {
     const [showAnswer, setShowAnswer] = useState(false);
 
     return (
-        <div className="material-card p-8 mb-8 transition-all duration-300">
+        <div className="material-card p-4 lg:p-8 mb-8 transition-all duration-300">
             <div className="flex items-start mb-6">
-                <div className="w-12 h-12 rounded-xl bg-primary-container text-on-primary-container flex-shrink-0 flex items-center justify-center mr-4 font-bold text-xl">
+                <div className="w-12 h-12 rounded-xl bg-primary-container text-on-primary-container flex-shrink-0 flex items-center justify-center mr-3 lg:mr-4 font-bold text-xl">
                     {number}
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 min-w-0">
                     <h3 className="text-xl font-bold text-on-surface mb-2">{title}</h3>
                     <div className="prose prose-lg max-w-none text-on-surface-variant mb-6">
                         {children}
@@ -39,7 +39,7 @@ const Question = ({ number, title, children, answer }) => {
                         </button>
 
                         {showAnswer && (
-                            <div className="mt-6 bg-surface-variant/30 rounded-xl p-6 border border-outline/10 animate-fade-in">
+                            <div className="mt-6 bg-surface-variant/30 rounded-xl p-4 lg:p-6 border border-outline/10 animate-fade-in">
                                 <h4 className="text-sm font-bold text-primary uppercase tracking-wider mb-4">Detailed Solution</h4>
                                 <div className="prose prose-lg max-w-none text-on-surface-variant">
                                     {answer}
@@ -92,14 +92,14 @@ export default function ExamQuestionsPage() {
                         </div>
                         <div>
                             <strong className="text-on-surface">c. Probability of exactly 2 defective</strong>
-                            <div className="font-mono text-sm bg-surface p-2 rounded border border-outline/10 my-2">
+                            <div className="font-mono text-sm bg-surface p-2 rounded border border-outline/10 my-2 overflow-x-auto">
                                 <BlockMath math="P(X=2) = \binom{50}{2} (0.03)^2 (0.97)^{48}" />
                                 <BlockMath math="= 1225 \times 0.0009 \times 0.2311 \approx 0.255" />
                             </div>
                         </div>
                         <div>
                             <strong className="text-on-surface">d. Probability of no defective tablets</strong>
-                            <div className="font-mono text-sm bg-surface p-2 rounded border border-outline/10 my-2">
+                            <div className="font-mono text-sm bg-surface p-2 rounded border border-outline/10 my-2 overflow-x-auto">
                                 <BlockMath math="P(X=0) = \binom{50}{0} (0.03)^0 (0.97)^{50} \approx 0.218" />
                             </div>
                             <p>
@@ -143,14 +143,14 @@ export default function ExamQuestionsPage() {
                         </div>
                         <div>
                             <strong className="text-on-surface">b. Probability of exactly 6 users</strong>
-                            <div className="font-mono text-sm bg-surface p-2 rounded border border-outline/10 my-2">
+                            <div className="font-mono text-sm bg-surface p-2 rounded border border-outline/10 my-2 overflow-x-auto">
                                 <BlockMath math="P(X=6) = \binom{15}{6} (0.4)^6 (0.6)^9 \approx 0.2066" />
                             </div>
                         </div>
                         <div>
                             <strong className="text-on-surface">c. Probability of at most 4 users</strong>
                             <p>We sum <InlineMath math="P(X=0) + P(X=1) + P(X=2) + P(X=3) + P(X=4)" />.</p>
-                            <div className="font-mono text-sm bg-surface p-2 rounded border border-outline/10 my-2">
+                            <div className="font-mono text-sm bg-surface p-2 rounded border border-outline/10 my-2 overflow-x-auto">
                                 <BlockMath math="P(X \le 4) \approx 0.0005 + 0.0047 + 0.0219 + 0.0634 + 0.1268 = 0.2173" />
                             </div>
                         </div>
@@ -205,7 +205,7 @@ export default function ExamQuestionsPage() {
                         </div>
                         <div>
                             <strong className="text-on-surface">b. Probability fewer than 3</strong>
-                            <div className="font-mono text-sm bg-surface p-2 rounded border border-outline/10 my-2">
+                            <div className="font-mono text-sm bg-surface p-2 rounded border border-outline/10 my-2 overflow-x-auto">
                                 <BlockMath math="P(X < 3) = P(0) + P(1) + P(2) \approx 0.0032 + 0.0211 + 0.0669 = 0.0912" />
                             </div>
                         </div>
@@ -221,7 +221,7 @@ export default function ExamQuestionsPage() {
                         </div>
                         <div>
                             <strong className="text-on-surface">d. Probability of at least 8</strong>
-                            <div className="font-mono text-sm bg-surface p-2 rounded border border-outline/10 my-2">
+                            <div className="font-mono text-sm bg-surface p-2 rounded border border-outline/10 my-2 overflow-x-auto">
                                 <BlockMath math="P(X \ge 8) = 1 - P(X \le 7) \approx 1 - 0.898 = 0.102" />
                             </div>
                             <p>
@@ -268,7 +268,7 @@ export default function ExamQuestionsPage() {
                         <div>
                             <strong className="text-on-surface">b. Is 7 rejections high?</strong>
                             <p>Calculate <InlineMath math="P(X \ge 7)" />.</p>
-                            <div className="font-mono text-sm bg-surface p-2 rounded border border-outline/10 my-2">
+                            <div className="font-mono text-sm bg-surface p-2 rounded border border-outline/10 my-2 overflow-x-auto">
                                 <BlockMath math="P(X \ge 7) = 1 - P(X \le 6) \approx 1 - 0.936 = 0.064" />
                             </div>
                             <p>
@@ -277,7 +277,7 @@ export default function ExamQuestionsPage() {
                         </div>
                         <div>
                             <strong className="text-on-surface">c. Probability of exactly 3</strong>
-                            <div className="font-mono text-sm bg-surface p-2 rounded border border-outline/10 my-2">
+                            <div className="font-mono text-sm bg-surface p-2 rounded border border-outline/10 my-2 overflow-x-auto">
                                 <BlockMath math="P(X=3) = \binom{30}{3} (0.12)^3 (0.88)^{27} \approx 0.221" />
                             </div>
                         </div>
