@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+    /* Material 3 Color System - Violet Theme */
+    --color-primary: #6750A4;
+    --color-on-primary: #FFFFFF;
+    --color-primary-container: #EADDFF;
+    --color-on-primary-container: #21005D;
+
+    --color-secondary: #625B71;
+    --color-on-secondary: #FFFFFF;
+    --color-secondary-container: #E8DEF8;
+    --color-on-secondary-container: #1D192B;
+
+    --color-tertiary: #7D5260;
+    --color-on-tertiary: #FFFFFF;
+    --color-tertiary-container: #FFD8E4;
+    --color-on-tertiary-container: #31111D;
+
+    --color-error: #B3261E;
+    --color-on-error: #FFFFFF;
+    --color-error-container: #F9DEDC;
+    --color-on-error-container: #410E0B;
+
+    --color-background: #FFFBFE;
+    --color-on-background: #1C1B1F;
+    --color-surface: #FFFBFE;
+    --color-on-surface: #1C1B1F;
+
+    --color-surface-variant: #E7E0EC;
+    --color-on-surface-variant: #49454F;
+    --color-outline: #79747E;
+
+    /* Custom Font Family */
+    --font-sans: "Roboto", "Inter", system-ui, sans-serif;
+}
+
+/* Global Styles */
+body {
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+    font-family: var(--font-sans);
+}
+
+/* Material Utilities */
+.material-card {
+    background-color: var(--color-surface);
+    border-radius: 1.5rem;
+    /* 24px */
+    border: 1px solid var(--color-outline);
+    /* Elevation 1 */
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
+}
+
+.material-card-filled {
+    background-color: var(--color-surface-variant);
+    border-radius: 1.5rem;
+    color: var(--color-on-surface-variant);
+    border: none;
+}
+
+.material-btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    border-radius: 9999px;
+    padding: 0.625rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.material-btn-primary:hover {
+    background-color: #6750A4;
+    /* Darken slightly or use state layer */
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+}
+
+.material-btn-tonal {
+    background-color: var(--color-secondary-container);
+    color: var(--color-on-secondary-container);
+    border-radius: 9999px;
+    padding: 0.625rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.material-btn-tonal:hover {
+    background-color: #D1C4E9;
+    /* Slightly darker container */
+}
+
+/* Animations */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fade-in 0.5s ease-out forwards;
+}
