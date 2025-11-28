@@ -146,7 +146,7 @@ export default function HomePage() {
                 <div className="bg-surface-variant/30 rounded-xl p-6">
                     <h3 className="text-lg font-semibold text-primary mb-4">Group - 1</h3>
                     <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                        {['Jay Aherkar', 'Nihar Asawa', 'Kabeer Pandey', 'Lakshya Vhora', 'Maanas Jain'].map((name, index) => (
+                        {['Jay Aherkar', 'Kabeer Pandey', 'Lakshya Vhora', 'Maanas Jain'].map((name, index) => (
                             <li key={index} className="flex items-center text-on-surface-variant">
                                 <span className="w-2 h-2 rounded-full bg-primary/50 mr-3"></span>
                                 {name}

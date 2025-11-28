@@ -47,7 +47,7 @@ ChanceLab is an interactive learning platform designed to make mastering probabi
 **Group - 1**
 
 - Jay Aherkar
-- Nihar Asawa
+
 - Kabeer Pandey
 - Lakshya Vhora
 - Maanas Jain
